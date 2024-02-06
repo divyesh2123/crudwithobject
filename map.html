@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        let p = new Map();
+
+        let p1 ="this is the javascript. this is the";
+
+        let p2 = p1.split(" ");
+
+        console.log(p2);
+        for(let i=0;i<p1.length;i=i+1)
+        {
+
+            if(p.has(p1[i]) == false)
+            {
+                p.set(p1[i],1);
+            }
+            else
+            {
+                let c = p.get(p1[i]);
+                c=c+1;
+
+                p.set(p1[i],c);
+
+            }
+           
+        }
+
+        console.log(p);
+
+
+
+    </script>
+    
+</body>
+</html>

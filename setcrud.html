@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+        <input type="text" value=""  id="item"/>
+        <button onclick="addItems()">saveInfo</button>
+    
+        <table>
+
+            <tbody id="display">
+
+
+            </tbody>
+
+        </table>
+    <script>
+
+        let s = new Set();
+
+        function addItems()
+        {   
+            let p = document.getElementById("item").value;
+
+            s.add(p);
+
+            display();
+        }
+
+        function display()
+        {   
+
+            let p = Array.from(s);
+
+           let k = p.map(function(value) {
+
+            return `<tr><td>${value}</td></tr>`
+           });
+
+           console.log(k);
+
+
+           document.getElementById("display").innerHTML = k.join(" ");
+
+        }
+
+
+    </script>
+    
+</body>
+</html>
